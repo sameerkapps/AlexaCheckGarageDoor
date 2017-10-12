@@ -1,0 +1,100 @@
+﻿<Page
+    x:Class="App.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:App.ViewModels"
+    mc:Ignorable="d">
+
+    <Page.DataContext>
+        <vm:MainViewModel/>
+    </Page.DataContext>
+
+    <Grid 
+        VerticalAlignment="Center"
+        Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/> <!-- 0 DeviceIP -->
+            <RowDefinition Height="Auto"/> <!-- 1 DeviceName -->
+            <RowDefinition Height="Auto"/> <!-- 2 Setup -->
+            <RowDefinition Height="Auto"/> <!-- 3 Check Door -->            
+            <RowDefinition Height="Auto"/> <!-- 4 Status -->           
+            <RowDefinition Height="Auto"/> <!-- 5 Last checked -->           
+        </Grid.RowDefinitions>
+        <TextBlock
+            Grid.Row="0"
+            Grid.Column="0"
+            HorizontalAlignment="Right"
+            Margin="5"
+            Text="Device IP"/>
+        <TextBox
+            Grid.Row="0"
+            Grid.Column="1"
+            HorizontalAlignment="Left"
+            Margin="5"
+            PlaceholderText="e.g.10.11.98.43"
+            Text="{Binding DeviceIP, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>        
+        <TextBlock
+            Grid.Row="1"
+            Grid.Column="0"
+            HorizontalAlignment="Right"
+            Margin="5"
+            Text="Device Name"/>
+        <TextBox
+            Grid.Row="1"
+            Grid.Column="1"
+            HorizontalAlignment="Left"
+            Margin="5"
+            PlaceholderText="e.g.Garage Door"
+            Text="{Binding DeviceName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        <Button
+            Grid.Row="2"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Margin="5"            
+            Content="Setup"
+            Command="{Binding SetupHub}"/>        
+        <Button
+            Grid.Row="3"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Margin="5"            
+            Content="Check the Door"
+            Command="{Binding CheckDoor}"/>
+        <TextBlock
+            Grid.Row="4"
+            Grid.Column="0"
+            HorizontalAlignment="Right"
+            Margin="5"
+            Text="Status"/>
+        <TextBlock
+            Grid.Row="4"
+            Grid.Column="1"
+            HorizontalAlignment="Left"
+            Margin="5"
+            Text="{Binding Status, Mode=OneWay}"/>
+        <TextBlock
+            Grid.Row="5"
+            Grid.Column="0"
+            HorizontalAlignment="Right"
+            Margin="5"
+            Text="Last Checked"/>
+        <TextBlock
+            Grid.Row="5"
+            Grid.Column="1"
+            HorizontalAlignment="Left"
+            Margin="5"
+            Text="{Binding LastChecked, Mode=OneWay}"/>        
+    </Grid>
+</Page>
+

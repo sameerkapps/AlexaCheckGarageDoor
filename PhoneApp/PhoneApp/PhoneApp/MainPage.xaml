@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:PhoneApp"
+             xmlns:vm="clr-namespace:PhoneApp.ViewModels"
+             x:Class="PhoneApp.MainPage">
+    <ContentPage.BindingContext>
+        <vm:MainPageViewModel/>
+    </ContentPage.BindingContext>
+
+    <Grid VerticalOptions="Center">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!--0 Door Name-->
+            <RowDefinition Height="Auto"/>
+            <!--1 Check button-->
+            <RowDefinition Height="Auto"/>
+            <!--2 Status-->
+            <RowDefinition Height="Auto"/>
+            <!--3 Last checked-->
+        </Grid.RowDefinitions>
+
+        <Label
+            Grid.Row="0"
+            Grid.Column="0"
+            Margin="5"
+            HorizontalOptions="End"
+            Text="Door Name:"/>
+        
+        <Entry
+            Grid.Row="0"
+            Grid.Column="1"
+            Margin="5"
+            HorizontalOptions="Start"
+            VerticalOptions="Center"
+            Text="{Binding Path=DeviceName, Mode=TwoWay}"/>
+
+        <Button
+            Grid.Row="1"
+            Grid.ColumnSpan="2"
+            HorizontalOptions="Center"
+            Text="Check"
+            Command="{Binding CheckDoorCommand}"/>
+
+        <Label
+            Grid.Row="2"
+            Grid.Column="0"
+            Margin="5"
+            HorizontalOptions="End"
+            Text="Status:"/>
+
+        <Label
+            Grid.Row="2"
+            Grid.Column="1"
+            Margin="5"
+            HorizontalOptions="Start"
+            VerticalOptions="Center"
+            Text="{Binding Path=Status, Mode=OneWay}"/>
+
+        <Label
+            Grid.Row="3"
+            Grid.Column="0"
+            Margin="5"
+            HorizontalOptions="End"
+            VerticalOptions="Center"
+            Text="Last Checked:"/>
+        
+        <Label
+            Grid.Row="3"
+            Grid.Column="1"
+            Margin="5"
+            HorizontalOptions="Start"
+            VerticalOptions="Center"
+            Text="{Binding Path=LastChecked, Mode=OneWay}"/>
+    </Grid>
+
+</ContentPage>

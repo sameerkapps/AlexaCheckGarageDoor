@@ -1,0 +1,8 @@
+C:\GithubRepos\AlexaCheckGarageDoor\RaspberyPi\ESP82266ClientLib\bin\Debug\netstandard1.1\ESP82266ClientLib.deps.json
+C:\GithubRepos\AlexaCheckGarageDoor\RaspberyPi\ESP82266ClientLib\bin\Debug\netstandard1.1\ESP82266ClientLib.dll
+C:\GithubRepos\AlexaCheckGarageDoor\RaspberyPi\ESP82266ClientLib\bin\Debug\netstandard1.1\ESP82266ClientLib.pdb
+C:\GithubRepos\AlexaCheckGarageDoor\RaspberyPi\ESP82266ClientLib\obj\Debug\netstandard1.1\ESP82266ClientLib.csprojResolveAssemblyReference.cache
+C:\GithubRepos\AlexaCheckGarageDoor\RaspberyPi\ESP82266ClientLib\obj\Debug\netstandard1.1\ESP82266ClientLib.csproj.CoreCompileInputs.cache
+C:\GithubRepos\AlexaCheckGarageDoor\RaspberyPi\ESP82266ClientLib\obj\Debug\netstandard1.1\ESP82266ClientLib.AssemblyInfo.cs
+C:\GithubRepos\AlexaCheckGarageDoor\RaspberyPi\ESP82266ClientLib\obj\Debug\netstandard1.1\ESP82266ClientLib.dll
+C:\GithubRepos\AlexaCheckGarageDoor\RaspberyPi\ESP82266ClientLib\obj\Debug\netstandard1.1\ESP82266ClientLib.pdb
