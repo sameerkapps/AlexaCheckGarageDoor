@@ -1,0 +1,7 @@
+DoorCheck Is door open
+DoorCheck Is Garage open
+DoorCheck Check door
+DoorCheck Is door closed
+DoorCheck Is Garage closed
+AMAZON.HelpIntent help
+AMAZON.HelpIntent Help

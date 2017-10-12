@@ -1,0 +1,11 @@
+{
+  "intents": [
+    {
+      "intent": "DoorCheck",
+      "slots": [ ]
+    },
+    {
+      "intent": "AMAZON.HelpIntent"
+    }
+  ]
+}
